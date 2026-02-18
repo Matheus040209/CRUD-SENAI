@@ -1,0 +1,54 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    background-color: rgb(221, 221, 228);
+}
+
+h1{
+    font-weight: 700;
+}
+
+thead{
+    background-color: #0375f8;
+}
+
+header{
+    min-width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto 12px;
+}
+
+#btn-add{
+    font-size: 20px;
+    font-weight: 500;
+    width: 30px;
+    border: none;
+    color: white;
+    background-color: #0375f8;
+    border-radius: 5px;
+}
+
+.btn-edit{
+    border: none;
+    background-color: white;
+}
+
+.btn-delete{
+    border: none;
+    background-color: white;
+}
+
+.container{
+    background-color: white;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+h1{
+    padding: 10px;
+}
