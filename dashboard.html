@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Hub</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="dashboard">
+    <a href="./index.html" id="btn-back" class="btn btn-secondary">⬅ Voltar</a>
+
+    <div class="container my-5 p-4">
+      <header class="app-header">
+        <h1>📦 Stock Hub</h1>
+        <div class="header-actions">
+          <button id="theme-toggle" class="btn btn-outline-secondary btn-sm">
+            🌙
+          </button>
+          <button id="btn-add" class="btn btn-primary">+ Produto</button>
+        </div>
+      </header>
+
+      <div class="table-wrapper">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Produto</th>
+              <th>Preço</th>
+              <th>Estoque</th>
+              <th>Código</th>
+              <th class="text-center">Ações</th>
+            </tr>
+          </thead>
+          <tbody id="product-list"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Modal de Edição / Adição -->
+    <div class="modal-container">
+      <div class="modal-box">
+        <h2>Produto</h2>
+        <label>Nome</label>
+        <input id="m-nome" type="text" class="form-control" />
+        <label>Preço</label>
+        <input id="m-preco" type="text" class="form-control" />
+        <label>Estoque</label>
+        <input id="m-estoque" type="text" class="form-control" />
+        <label>Código</label>
+        <input id="m-codigo" type="text" readonly class="form-control" />
+        <button id="btnSalvar" class="btn btn-primary mt-3">Salvar</button>
+      </div>
+    </div>
+
+    <!-- Modal de Exclusão -->
+    <div class="modal-container delete-modal">
+      <div class="modal-box">
+        <h2>Excluir Produto</h2>
+        <p id="delete-text"></p>
+        <div class="d-flex justify-content-end gap-2 mt-3">
+          <button id="btnCancelDelete" class="btn btn-secondary">
+            Cancelar
+          </button>
+          <button id="btnConfirmDelete" class="btn btn-danger">Excluir</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="./assets/js/theme.js" defer></script>
+    <script src="./assets/js/dashboard.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
